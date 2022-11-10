@@ -11,14 +11,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
 
-    private TextView textViewOp1,textViewOp2,textViewOp3,textViewResults,result;
+    private TextView textViewOp1,textViewOp2,textViewOp3,textViewResults,resultStatus;
 
     private Button option1,option2,option3;
 
     int total=0,correct=0,incorrect=0;
-    List<Integer> list=new ArrayList<Integer>();
+    List<String> list=new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,14 @@ public class MainActivity extends AppCompatActivity {
         option1=findViewById(R.id.buttonOpt1);
         option2=findViewById(R.id.buttonOpt2);
         option3=findViewById(R.id.buttonOpt3);
-        result=findViewById(R.id.textViewTotal);
+        resultStatus=findViewById(R.id.textViewTotal);
+
+        option1.setOnClickListener(this);
+        option2.setOnClickListener(this);
+        option3.setOnClickListener(this);
 
 
+        setQuestion();
     }
 
     public int generateRnadomNumber(int range)
@@ -112,8 +117,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void optionOne(View view)
+    @Override
+    public void onClick(View view)
     {
+        int num1=Integer.parseInt(textViewOp1.getText().toString());
+        int num2=Integer.parseInt(textViewOp2.getText().toString());
+        int result=num1*num2;
+        int optSelected=0;
+        switch (view.getId()) {
+            case R.id.buttonOpt1:
+                optSelected=Integer.parseInt(option1.getText().toString());
+                break;
+            case R.id.buttonOpt2:
+                optSelected=Integer.parseInt(option2.getText().toString());
+                break;
+            case R.id.buttonOpt3:
+                optSelected=Integer.parseInt(option3.getText().toString());
+                break;
+        }
+
+        boolean status=false;
+        if(result==optSelected)
+        {
+            correct++;
+            status=true;
+        }
+        else
+            incorrect++;
+        total++;
+        resultStatus.setText("Total : "+total+"\nCorrect : "+correct+"\nIncorrect : "+incorrect);
+        String str="";
+        if(status==true) {
+            str = Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "    " +
+                    Integer.toString(optSelected)+"   "+"CORRECT";
+        }
+        else
+        {
+            str = Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "    " +
+                    Integer.toString(optSelected)+"   "+"INCORRECT";
+        }
+        list.add(str);
+
+
         setQuestion();
     }
 
