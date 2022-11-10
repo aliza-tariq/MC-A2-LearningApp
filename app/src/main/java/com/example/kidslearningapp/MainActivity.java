@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private Button option1,option2,option3;
 
     int total=0,correct=0,incorrect=0;
-    List<String> list=new ArrayList<String>();
+    Vector<String> vecStr = new Vector<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,16 +149,29 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         resultStatus.setText("Total : "+total+"\nCorrect : "+correct+"\nIncorrect : "+incorrect);
         String str="";
         if(status==true) {
-            str = Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "    " +
-                    Integer.toString(optSelected)+"   "+"CORRECT";
+            str = Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
+                    Integer.toString(optSelected)+"_____"+"CORRECT";
         }
         else
         {
-            str = Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "    " +
-                    Integer.toString(optSelected)+"   "+"INCORRECT";
+            str = Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
+                    Integer.toString(optSelected)+"_____"+"INCORRECT";
         }
-        list.add(str);
+        if(vecStr.size()==10)
+        {
+            vecStr.remove(0);
+        }
 
+        vecStr.add(str);
+        String data="";
+        for(int i=0;i<vecStr.size();i++)
+        {
+            String count=Integer.toString((int)(i+1));
+            data=data+count+". "+vecStr.get(i)+"\n";
+        }
+        data=" QUESTION  ANSWER C/IC\n"+data;
+
+        textViewResults.setText(data);
 
         setQuestion();
     }
