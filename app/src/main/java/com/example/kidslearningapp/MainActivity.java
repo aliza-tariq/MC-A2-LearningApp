@@ -2,6 +2,7 @@ package com.example.kidslearningapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,7 @@ import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
 
-    private TextView textViewOp1,textViewOp2,textViewOp3,textViewResults,resultStatus;
+    private TextView textViewOp1,textViewOp2,textViewOp3,textViewResults,resultStatus,textViewInfo;
 
     private Button option1,option2,option3;
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         textViewOp2=findViewById(R.id.textViewOp2);
         textViewOp3=findViewById(R.id.textViewOp3);
         textViewResults=findViewById(R.id.textViewAns);
+        textViewInfo=findViewById(R.id.textView5);
 
         option1=findViewById(R.id.buttonOpt1);
         option2=findViewById(R.id.buttonOpt2);
@@ -117,6 +119,18 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     }
 
+    public void setCorrectAns()
+    {
+        textViewInfo.setText("CORRECT");
+        textViewInfo.setBackgroundColor(Color.GREEN);
+    }
+
+    public void setWrongAns()
+    {
+        textViewInfo.setText("WRONG");
+        textViewInfo.setBackgroundColor(Color.RED);
+    }
+
 
     @Override
     public void onClick(View view)
@@ -142,9 +156,12 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         {
             correct++;
             status=true;
+            setCorrectAns();
         }
-        else
+        else {
             incorrect++;
+            setWrongAns();
+        }
         total++;
         resultStatus.setText("Total : "+total+"\nCorrect : "+correct+"\nIncorrect : "+incorrect);
         String str="";
