@@ -3,11 +3,13 @@ package com.example.kidslearningapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button option1,option2,option3;
 
-    int skyRight=0,skyWrong=0,grassRight=0,grassWrong=0,rootRight=0,rootWrong=0;
+    int total=0,correct=0,incorrect=0;
     List<Integer> list=new ArrayList<Integer>();
 
     @Override
@@ -36,37 +38,92 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public int generateRnadomNumber(int start,int range)
+    public int generateRnadomNumber(int range)
     {
         Random random=new Random();
-        int num=random.nextInt(start,range);
+        int num=random.nextInt(range);
         return num;
+    }
+    public int randomNumber(int min,int max)
+    {
+       return (int)(Math.random() * (max - min + 1) + min);
     }
     public void setQuestion()
     {
-        int num1=generateRnadomNumber(0,10);
-        int num2=generateRnadomNumber(0,10);
+        int num1=generateRnadomNumber(10);
+        int num2=generateRnadomNumber(10);
         int answer=num1*num2;
 
-        int opt1=generateRnadomNumber(answer-10,answer+10);
-        while(opt1!=answer)
+        int opt1=answer;
+
+
+        int opt2=randomNumber(answer-10,answer+10);
+        while(opt2==answer||opt2==opt1)
         {
-            opt1=generateRnadomNumber(answer-10,answer+10);
+            opt2=randomNumber(answer-10,answer+10);
         }
 
-
-        int opt2=generateRnadomNumber(answer-10,answer+10);
-        while(opt2!=answer&&opt2!=opt1)
+        int opt3=randomNumber(answer-10,answer+10);
+        while(opt3==answer||opt3==opt1||opt3==opt2)
         {
-            opt2=generateRnadomNumber(answer-10,answer+10);
+            opt3=randomNumber(answer-10,answer+10);
         }
 
-        int opt3=generateRnadomNumber(answer-10,answer+10);
-        while(opt3!=answer&&opt3!=opt1&&opt3!=opt2)
+        textViewOp1.setText(Integer.toString(num1));
+        textViewOp2.setText(Integer.toString(num2));
+
+        int resultOpt=generateRnadomNumber(3);
+        if(resultOpt==0) {
+            option1.setText(Integer.toString(opt1));
+            option2.setText(Integer.toString(opt2));
+            option3.setText(Integer.toString(opt3));
+        }
+        else if(resultOpt==1)
         {
-            opt3=generateRnadomNumber(answer-10,answer+10);
+            int resultOpt2=generateRnadomNumber(2);
+            option2.setText(Integer.toString(opt1));
+            if(resultOpt2==0)
+            {
+                option1.setText(Integer.toString(opt2));
+                option3.setText(Integer.toString(opt3));
+            }
+            else
+            {
+                option1.setText(Integer.toString(opt3));
+                option3.setText(Integer.toString(opt2));
+            }
+        }
+        else
+        {
+            int resultOpt2=generateRnadomNumber(2);
+            option3.setText(Integer.toString(opt1));
+            if(resultOpt2==0)
+            {
+                option1.setText(Integer.toString(opt2));
+                option2.setText(Integer.toString(opt3));
+            }
+            else
+            {
+                option1.setText(Integer.toString(opt3));
+                option2.setText(Integer.toString(opt2));
+            }
         }
 
+    }
+
+
+    public void optionOne(View view)
+    {
+        setQuestion();
+    }
+
+    public void optionTwo(View view)
+    {
+        setQuestion();
+    }
+    public void optionThree(View view)
+    {
+        setQuestion();
     }
 
 }
