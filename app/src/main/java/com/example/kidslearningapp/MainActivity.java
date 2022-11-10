@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             String count=Integer.toString((int)(i+1));
             data=data+count+". "+vecStr.get(i)+"\n";
         }
-        data=" QUESTION  ANSWER C/IC\n"+data;
+        data="   QUESTION___YOUR ANS___\u2714/\u2716\n"+data;
 
         textViewResults.setText(data);
 
