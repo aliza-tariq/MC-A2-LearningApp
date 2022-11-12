@@ -165,6 +165,12 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         total++;
         resultStatus.setText("Total : "+total+"\nCorrect : "+correct+"\nIncorrect : "+incorrect);
         String str="";
+
+        String column1Format = "%-15.15s";  // fixed size 3 characters, left aligned
+        String column2Format = "%-3.3s";  // fixed size 8 characters, left aligned
+        String column3Format = "%-3.3s";
+        String formatInfo = column1Format + " " + column2Format + " " + column3Format;
+        
         String count=Integer.toString((int)(total));
         if(status==true) {
             str = count+". "+Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
