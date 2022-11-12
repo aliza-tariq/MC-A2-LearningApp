@@ -165,13 +165,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         total++;
         resultStatus.setText("Total : "+total+"\nCorrect : "+correct+"\nIncorrect : "+incorrect);
         String str="";
+        String count=Integer.toString((int)(total));
         if(status==true) {
-            str = Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
+            str = count+". "+Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
                     Integer.toString(optSelected)+"_____"+"\u2714";
         }
         else
         {
-            str = Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
+            str =  count+". "+Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
                     Integer.toString(optSelected)+"_____"+"\u2716";
         }
         if(vecStr.size()==10)
@@ -183,8 +184,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         String data="";
         for(int i=0;i<vecStr.size();i++)
         {
-            String count=Integer.toString((int)(i+1));
-            data=data+count+". "+vecStr.get(i)+"\n";
+
+            data=data+vecStr.get(i)+"\n";
         }
         data="   QUESTION___YOUR ANS___\u2714/\u2716\n"+data;
 
