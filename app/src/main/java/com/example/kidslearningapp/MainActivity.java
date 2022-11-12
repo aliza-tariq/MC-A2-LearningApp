@@ -167,12 +167,12 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         String str="";
         if(status==true) {
             str = Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
-                    Integer.toString(optSelected)+"_____"+"CORRECT";
+                    Integer.toString(optSelected)+"_____"+"\u2714";
         }
         else
         {
             str = Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
-                    Integer.toString(optSelected)+"_____"+"INCORRECT";
+                    Integer.toString(optSelected)+"_____"+"\u2716";
         }
         if(vecStr.size()==10)
         {
