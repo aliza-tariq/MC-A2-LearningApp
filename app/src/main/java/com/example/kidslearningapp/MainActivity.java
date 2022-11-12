@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
             data=data+vecStr.get(i)+"\n";
         }
-        
+
         textViewResults.setText(data);
 
         setQuestion();
