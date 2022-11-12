@@ -165,21 +165,20 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         total++;
         resultStatus.setText("Total : "+total+"\nCorrect : "+correct+"\nIncorrect : "+incorrect);
         String str="";
+        String options="\n        A. "+option1.getText().toString()+"\n        B. "+option2.getText().toString()+"\n        C. "+option3.getText().toString();
 
-        String column1Format = "%-15.15s";  // fixed size 3 characters, left aligned
-        String column2Format = "%-3.3s";  // fixed size 8 characters, left aligned
-        String column3Format = "%-3.3s";
-        String formatInfo = column1Format + " " + column2Format + " " + column3Format;
-        
+
         String count=Integer.toString((int)(total));
         if(status==true) {
-            str = count+". "+Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
-                    Integer.toString(optSelected)+"_____"+"\u2714";
+            str = count+". "+Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) +
+                    options+"\nYour Ans :" +
+                    Integer.toString(optSelected)+"_____"+"\u2714"+"\n";
         }
         else
         {
-            str =  count+". "+Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) + "_____" +
-                    Integer.toString(optSelected)+"_____"+"\u2716";
+            str =  count+". "+Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) +
+                    options+"\nYour Ans :"+
+                    Integer.toString(optSelected)+"_____"+"\u2716"+"\n";
         }
         if(vecStr.size()==10)
         {
