@@ -154,7 +154,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:background="#9C7C7C"
-            android:text="Total : \nCorrect : "
+            android:text="Total : \nCorrect : \nIncorrect : "
             android:textColor="#7F0B93"
             android:textSize="20dp"
             android:textStyle="bold"
