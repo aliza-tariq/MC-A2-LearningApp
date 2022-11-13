@@ -47,12 +47,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         setQuestion();
     }
 
+    //generate random num 0-range
     public int generateRnadomNumber(int range)
     {
         Random random=new Random();
         int num=random.nextInt(range);
         return num;
     }
+
     public int randomNumber(int min,int max)
     {
        return (int)(Math.random() * (max - min + 1) + min);
