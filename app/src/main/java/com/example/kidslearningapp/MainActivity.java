@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     {
        return (int)(Math.random() * (max - min + 1) + min);
     }
+
+    //Function to set Questions
     public void setQuestion()
     {
         int num1=generateRnadomNumber(10);
