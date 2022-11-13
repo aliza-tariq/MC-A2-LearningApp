@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         if(status==true) {
             str = count+". "+Integer.toString(num1) + "x" + Integer.toString(num2) + "=" + Integer.toString(result) +
                     options+"\nYour Ans :" +
-                    Integer.toString(optSelected)+"_____"+"\u2714"+"\n"+str2;
+                    Integer.toString(optSelected)+"_____"+"\u2714"+"\n"+str2+"\n";
         }
         else
         {
