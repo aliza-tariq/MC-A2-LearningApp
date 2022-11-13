@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         textViewInfo.setBackgroundColor(Color.RED);
     }
 
-
+///Extend class onClickListerner
     @Override
     public void onClick(View view)
     {
