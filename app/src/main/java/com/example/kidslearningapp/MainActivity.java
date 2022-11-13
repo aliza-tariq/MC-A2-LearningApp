@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private Button option1,option2,option3;
 
     int total=0,correct=0,incorrect=0;
+    //TO STORE QUESTIONS
     Vector<String> vecStr = new Vector<String>();
 
     @Override
