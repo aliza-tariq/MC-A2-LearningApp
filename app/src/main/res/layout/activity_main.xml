@@ -108,6 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="4dp"
 
             android:background="#7F0B93"
             android:text="Option1"
@@ -153,7 +154,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:background="#9C7C7C"
-            android:text="Total:"
+            android:text="Total : \nCorrect : "
             android:textColor="#7F0B93"
             android:textSize="20dp"
             android:textStyle="bold"
