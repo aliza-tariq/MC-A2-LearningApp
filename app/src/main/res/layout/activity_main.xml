@@ -191,7 +191,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="149dp"
             android:layout_marginEnd="10dp"
             android:background="#ACA1A1"
             android:text="&quot;QUESTIONS - ANSWERS  - \u2714/\u2716&quot;"
