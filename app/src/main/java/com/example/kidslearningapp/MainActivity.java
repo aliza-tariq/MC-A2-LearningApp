@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }
         total++;
         resultStatus.setText("Total : "+total+"\nCorrect : "+correct+"\nIncorrect : "+incorrect);
-        String str="",str2="*********************************************";
+        String str="",str2="****************************";
         String options="\n        A. "+option1.getText().toString()+"\n        B. "+option2.getText().toString()+
                 "\n        C. "+option3.getText().toString()+"\n"+str2;
 
