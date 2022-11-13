@@ -198,13 +198,4 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         setQuestion();
     }
 
-    public void optionTwo(View view)
-    {
-        setQuestion();
-    }
-    public void optionThree(View view)
-    {
-        setQuestion();
-    }
-
 }
