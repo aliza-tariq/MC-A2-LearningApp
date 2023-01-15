@@ -7,14 +7,19 @@ public class ResultModel {
     private int optionc;
     private int optionSelected;
     private int result;
+    private String status;
 
-    public ResultModel(String question, int optiona, int optionb, int optionc, int optionSelected, int result) {
+
+    public ResultModel(String question, int optiona, int optionb, int optionc,
+                       int optionSelected, int result,String status) {
         this.question = question;
         this.optiona = optiona;
         this.optionb = optionb;
         this.optionc = optionc;
         this.optionSelected = optionSelected;
         this.result = result;
+        this.status=status;
+
     }
 
     public String getQuestion() {
@@ -65,6 +70,15 @@ public class ResultModel {
         this.result = result;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
     @Override
     public String toString() {
         return "ResultModel{" +
@@ -74,6 +88,7 @@ public class ResultModel {
                 ", optionc=" + optionc +
                 ", optionSelected=" + optionSelected +
                 ", result=" + result +
+                ", status=" + status +
                 '}';
     }
 }

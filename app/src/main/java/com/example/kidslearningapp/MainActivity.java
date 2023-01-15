@@ -219,10 +219,18 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
         try {
             ResultModel resultModel;
-            resultModel = new ResultModel("2 * 3 = ?",6,5,8,6,6);
+            System.out.println(String.valueOf(num1)+" * "+String.valueOf(num2)+" = ?");
+            String question=String.valueOf(num1)+" * "+String.valueOf(num2)+" = ?";
+            int opta=Integer.parseInt(option1.getText().toString());
+            int optb=Integer.parseInt(option2.getText().toString());
+            int optc=Integer.parseInt(option3.getText().toString());
+            String status1=(status==true?"CORRECT":"WORNG");
+
+
+            resultModel = new ResultModel(question,opta,optb,optc,optSelected,result,status1);
             Toast.makeText(MainActivity.this, resultModel.toString(), Toast.LENGTH_SHORT).show();
             DBHelper dbHelper = new DBHelper(MainActivity.this);
-            dbHelper.addQuestionResult(resultModel);
+           dbHelper.addQuestionResult(resultModel);
 
         }
         catch (Exception e){
