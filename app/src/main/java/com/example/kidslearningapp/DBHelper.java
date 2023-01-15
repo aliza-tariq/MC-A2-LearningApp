@@ -1,5 +1,6 @@
 package com.example.kidslearningapp;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
@@ -21,24 +22,13 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    public DBHelper(@Nullable Context context,
-                    @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public DBHelper(@Nullable Context context) {
+        super(context, "resultDB.db", null, 4);
     }
 
-    public DBHelper(@Nullable Context context, @Nullable String name,
-                    @Nullable SQLiteDatabase.CursorFactory factory, int version,
-                    @Nullable DatabaseErrorHandler errorHandler) {
-        super(context, name, factory, version, errorHandler);
-    }
-
-    public DBHelper(@Nullable Context context,
-                    @Nullable String name, int version, @NonNull SQLiteDatabase.OpenParams openParams) {
-        super(context, name, version, openParams);
-    }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(SQLiteDatabase db) {
         String createTableSTatement = "CREATE TABLE " + RESULT_TABLE + "(" + RESULT_ID +
                 " Integer PRIMARY KEY AUTOINCREMENT, " +
                 QUESTION + " Text, " + OPTION_A + " Int, " +OPTION_B + " Int, " +OPTION_C + " Int, " +
@@ -48,7 +38,24 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+        db.execSQL("DROP TABLE IF EXISTS " + RESULT_TABLE);
+        onCreate(db);
+    }
 
+    public void addQuestionResult(ResultModel ResultModel) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        //Hash map, as we did in bundles
+        ContentValues cv = new ContentValues();
+
+        cv.put( QUESTION, ResultModel.getQuestion());
+        cv.put(OPTION_A, ResultModel.getOptiona());
+        cv.put(OPTION_B, ResultModel.getOptionb());
+        cv.put(OPTION_C, ResultModel.getOptionc());
+
+        cv.put(OPTION_SELECTED, ResultModel.getOptionSelected());
+        cv.put(RESULT, ResultModel.getResult());
+        db.insert(RESULT_TABLE, null, cv);
+        db.close();
     }
 }

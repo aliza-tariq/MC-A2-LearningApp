@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -214,6 +215,20 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             data=data+vecStr.get(i)+"\n";
         }
         textViewResults.setText(data);
+        //STORE IN DATA BASE
+
+        try {
+            ResultModel resultModel;
+            resultModel = new ResultModel("2 * 3 = ?",6,5,8,6,6);
+            Toast.makeText(MainActivity.this, resultModel.toString(), Toast.LENGTH_SHORT).show();
+            DBHelper dbHelper = new DBHelper(MainActivity.this);
+            dbHelper.addQuestionResult(resultModel);
+
+        }
+        catch (Exception e){
+            Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+        }
+
         setQuestion();
     }
 
