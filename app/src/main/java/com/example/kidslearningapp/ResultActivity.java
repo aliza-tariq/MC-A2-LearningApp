@@ -20,21 +20,21 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        textViewReceiveMessage = findViewById(R.id.resultText);
-        listViewResult=findViewById(R.id.listViewResult);
+//        textViewReceiveMessage = findViewById(R.id.resultText);
+//        listViewResult=findViewById(R.id.listViewResult);
 
-        Intent intent = getIntent();
+        //Intent intent = getIntent();
         //textViewReceiveMessage.setText(intent.getStringExtra("WelcomeMessage"));
-        int number = intent.getIntExtra("nmbr",0);
+//        int number = intent.getIntExtra("nmbr",0);
 
-        textViewReceiveMessage.setText(Integer.toString(number));
-
-
-        DBHelper dbHelper = new DBHelper(ResultActivity.this);
-        List<ResultModel> list = dbHelper.getAllResults();
-        ArrayAdapter arrayAdapter = new ArrayAdapter<ResultModel>
-                (ResultActivity.this, android.R.layout.simple_list_item_1,list);
-        listViewResult.setAdapter(arrayAdapter);
+//        textViewReceiveMessage.setText(Integer.toString(number));
+//
+//
+//        DBHelper dbHelper = new DBHelper(ResultActivity.this);
+//        List<ResultModel> list = dbHelper.getAllResults();
+//        ArrayAdapter arrayAdapter = new ArrayAdapter<ResultModel>
+//                (ResultActivity.this, android.R.layout.simple_list_item_1,list);
+//        listViewResult.setAdapter(arrayAdapter);
 
     }
 }
