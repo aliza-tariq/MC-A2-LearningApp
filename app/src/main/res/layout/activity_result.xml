@@ -38,9 +38,10 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="25dp"
             android:background="#BC8BC34A"
+            android:backgroundTint="#8BC34A"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +55,8 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -95,6 +98,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/q1btn2"
                 app:layout_constraintTop_toTopOf="@+id/q1btn2" />
+
+            <Button
+                android:id="@+id/status1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#751F04"
+                android:text="CORRECT"
+                android:textColor="@android:color/white"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -102,7 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="25dp"
             android:background="#BAE91E63"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,6 +134,8 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -159,7 +177,18 @@
                 app:layout_constraintStart_toEndOf="@+id/q2btn1"
                 app:layout_constraintTop_toBottomOf="@+id/question2" />
 
+            <Button
+                android:id="@+id/status2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#751F04"
+                android:text="CORRECT"
+                android:textColor="@android:color/white"
 
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -168,7 +197,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
             android:background="#BEFFEB3B"
             app:layout_constraintEnd_toEndOf="parent"
@@ -185,6 +214,8 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -226,6 +257,18 @@
                 app:layout_constraintStart_toEndOf="@+id/q3btn1"
                 app:layout_constraintTop_toBottomOf="@+id/question3" />
 
+            <Button
+                android:id="@+id/status3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#751F04"
+                android:text="CORRECT"
+                android:textColor="@android:color/white"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -235,7 +278,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
             android:background="#AB2196F3"
             app:layout_constraintEnd_toEndOf="parent"
@@ -252,6 +295,8 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -294,6 +339,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/question4" />
 
 
+            <Button
+                android:id="@+id/status4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#751F04"
+                android:text="CORRECT"
+                android:textColor="@android:color/white"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -302,7 +359,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
             android:background="#BE009688"
             app:layout_constraintEnd_toEndOf="parent"
@@ -319,6 +376,8 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -360,6 +419,19 @@
                 app:layout_constraintStart_toEndOf="@+id/q5btn1"
                 app:layout_constraintTop_toBottomOf="@+id/question5" />
 
+            <Button
+                android:id="@+id/status5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#751F04"
+                android:text="CORRECT"
+                android:textColor="@android:color/white"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -368,7 +440,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
             android:background="#BEEB3BFF"
             app:layout_constraintEnd_toEndOf="parent"
@@ -385,6 +457,8 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -426,6 +500,19 @@
                 app:layout_constraintStart_toEndOf="@+id/q6btn1"
                 app:layout_constraintTop_toBottomOf="@+id/question6" />
 
+            <Button
+                android:id="@+id/status6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#751F04"
+                android:text="CORRECT"
+                android:textColor="@android:color/white"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -434,7 +521,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
             android:background="#BEFF5722"
             app:layout_constraintEnd_toEndOf="parent"
@@ -451,6 +538,8 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -492,6 +581,19 @@
                 app:layout_constraintStart_toEndOf="@+id/q7btn1"
                 app:layout_constraintTop_toBottomOf="@+id/question7" />
 
+            <Button
+                android:id="@+id/status7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#751F04"
+                android:text="CORRECT"
+                android:textColor="@android:color/white"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -500,7 +602,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
             android:background="#B0673AB7"
             app:layout_constraintEnd_toEndOf="parent"
@@ -517,6 +619,8 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -558,6 +662,19 @@
                 app:layout_constraintStart_toEndOf="@+id/q8btn1"
                 app:layout_constraintTop_toBottomOf="@+id/question8" />
 
+            <Button
+                android:id="@+id/status8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#751F04"
+                android:text="CORRECT"
+                android:textColor="@android:color/white"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -566,7 +683,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
             android:background="#C6CDDC39"
             app:layout_constraintEnd_toEndOf="parent"
@@ -583,6 +700,8 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -624,6 +743,19 @@
                 app:layout_constraintStart_toEndOf="@+id/q9btn1"
                 app:layout_constraintTop_toBottomOf="@+id/question9" />
 
+            <Button
+                android:id="@+id/status9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#751F04"
+                android:text="CORRECT"
+                android:textColor="@android:color/white"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -632,7 +764,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
             android:background="#BEFFA03B"
             app:layout_constraintEnd_toEndOf="parent"
@@ -649,6 +781,8 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="10dp"
                 android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -689,6 +823,19 @@
                 app:layout_constraintEnd_toStartOf="@+id/q10btn3"
                 app:layout_constraintStart_toEndOf="@+id/q10btn1"
                 app:layout_constraintTop_toBottomOf="@+id/question10" />
+
+            <Button
+                android:id="@+id/status10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#751F04"
+                android:text="CORRECT"
+                android:textColor="@android:color/white"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
