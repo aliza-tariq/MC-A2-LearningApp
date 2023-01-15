@@ -102,46 +102,48 @@
 
         <Button
             android:id="@+id/buttonOpt1"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
 
             android:background="#7F0B93"
             android:text="Option1"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewOp3" />
 
         <Button
             android:id="@+id/buttonOpt2"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="#7F0B93"
+            android:layout_marginTop="24dp"
 
+            android:background="#7F0B93"
             android:text="Button"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonOpt1" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewOp3" />
 
         <Button
             android:id="@+id/buttonOpt3"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="#7F0B93"
+            android:layout_marginTop="24dp"
 
+            android:background="#7F0B93"
             android:text="Button"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.988"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonOpt2" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewOp3" />
 
         <TextView
             android:id="@+id/textViewTotal"
@@ -200,6 +202,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonOpt3" />
+
+        <Button
+            android:id="@+id/openPageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="244dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="openWebPage"
+            android:text="View Github"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textViewOp2"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

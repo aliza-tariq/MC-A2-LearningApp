@@ -2,7 +2,9 @@ package com.example.kidslearningapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,11 +19,12 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     private TextView textViewOp1,textViewOp2,textViewOp3,textViewResults,resultStatus,textViewInfo;
 
-    private Button option1,option2,option3;
+    private Button option1,option2,option3,btnResult;
 
     int total=0,correct=0,incorrect=0;
     //TO STORE QUESTIONS
     Vector<String> vecStr = new Vector<String>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         option2=findViewById(R.id.buttonOpt2);
         option3=findViewById(R.id.buttonOpt3);
         resultStatus=findViewById(R.id.textViewTotal);
+        btnResult=findViewById(R.id.BtnResult);
 
         option1.setOnClickListener(this);
         option2.setOnClickListener(this);
@@ -45,6 +49,18 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
 
         setQuestion();
+
+        btnResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+                int number=123456;
+
+                intent.putExtra("WelcomeMessage","السلام علیکم");
+                intent.putExtra("nmbr",number);
+                startActivity(intent);
+            }
+        });
     }
 
     //generate random num 0-range
@@ -199,6 +215,13 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }
         textViewResults.setText(data);
         setQuestion();
+    }
+
+    public void openWebPage(View view) {
+        Uri webpage = Uri.parse("https://github.com/aliza-tariq/MC-A2-LearningApp.git");
+        Intent intent = new
+                Intent(Intent.ACTION_VIEW, webpage);
+        startActivity(intent);
     }
 
 }
