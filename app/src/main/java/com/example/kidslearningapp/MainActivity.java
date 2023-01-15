@@ -3,6 +3,7 @@ package com.example.kidslearningapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -25,6 +26,12 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     int total=0,correct=0,incorrect=0;
     //TO STORE QUESTIONS
     Vector<String> vecStr = new Vector<String>();
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // do nothing or handle the changes here
+    }
 
 
     @Override
