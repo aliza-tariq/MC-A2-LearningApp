@@ -16,7 +16,7 @@
         style="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000"
+        android:background="#C4B33434"
         android:padding="5dp"
         android:textAlignment="center"
         tools:context=".MainActivity">
@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
 
-            android:background="#7F0B93"
+            android:backgroundTint="#B7009688"
             android:text="Option1"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -122,8 +122,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="#7F0B93"
 
+            android:backgroundTint="#B7009688"
             android:text="Button"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -136,8 +136,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="#7F0B93"
 
+            android:backgroundTint="#B7009688"
             android:text="Button"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -208,20 +208,19 @@
             android:id="@+id/openPageBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="56dp"
+            android:backgroundTint="#B7009688"
             android:onClick="openWebPage"
-            android:text="View Github"
+            android:text="Github"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textViewOp2"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/BtnResult" />
 
         <Button
             android:id="@+id/BtnResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="#B7009688"
             android:text="View Result"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.813"
